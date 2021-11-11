@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Form = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [hasError, setHasError] = useState(false);
+
+  useEffect( () => {
+    console.log("Runs on load...");
+  }, []);
 
   const handleSubmit = e => {
     e.preventDefault();
